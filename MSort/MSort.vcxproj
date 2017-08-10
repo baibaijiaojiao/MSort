@@ -146,7 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MyVector.cpp" />
     <ClCompile Include="SortMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyVector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

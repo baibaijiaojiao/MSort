@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "MyVector.h"
 void swap(int i, int j, int a[])
 {
 	int temp = a[j];
@@ -73,19 +73,43 @@ int BinarySearch(int a[], int n, int Value)
 }
 
 
+
+
 int main()
 {
 
-	int array[5] = { 3,1,5, 2,4 };
+// 	int array[5] = { 3,1,5, 2,4 };
+// 
+// 	sort2(array, 5);
+// 
+// 	for (int i = 0; i < 5; i++)
+// 	{
+// 		std::cout << array[i] << "\t";
+// 	}
+// 	std::cout << "\n";
+// 	std::cout << BinarySearch(array, 5, 6) << std::endl;
 
-	sort2(array, 5);
+// 	CMyVector a(1, 2, 3);
+// 	CMyVector b(3, 2, 1);
+// 
+// 	CMyVector c = a + b;  // a + b 中，a作为调用对象， b作为参数。
+// 	/*a = a + 1.1;*/
 
-	for (int i = 0; i < 5; i++)
+	CMyVector d = 1.1;
+	d = 2.0;
+	d = d + 3.0;
+// 	c.display();
+// 	a.display();
+
+	Test t(10);
+	if(t.isSame(10)) //该语句将返回true , 发生了隐试转换
 	{
-		std::cout << array[i] << "\t";
+		std::cout << "OK" << std::endl;
 	}
-	std::cout << "\n";
-	std::cout << BinarySearch(array, 5, 6) << std::endl;
+	Test tt = 10;  //调的是构造函数， 没有调用 operater=
+	tt = 5;  //调用的  operater= 
+// 	Test tt(2);
+// 	tt = 11;
 	system("pause");
 	return -1;
 }
