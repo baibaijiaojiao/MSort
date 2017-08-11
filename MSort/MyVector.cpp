@@ -18,6 +18,7 @@ CMyVector::CMyVector(const CMyVector & other)
 	cout << "拷贝构造函数 CMyVector: x = " << x << "\t y = " << y << "\t z = " << z << endl;
 }
 
+
 CMyVector::~CMyVector()
 {
 	cout << "析构函数 ~CMyVector: x = " << x << "\t y = " << y << "\t z = " << z << endl;
@@ -45,15 +46,15 @@ CMyVector CMyVector::operator+(const CMyVector & other)
 	return v1;
 }
 
-CMyVector operator+ (const CMyVector & other1, const CMyVector & other2)
-{
-	CMyVector v1;
-	v1.x = other1.x + other2.x;
-	v1.y = other1.y + other2.y;
-	v1.z = other1.z + other2.z;
-	cout << "友元 重载操作符 operator+: x = " << other1.x << "\t y = " << other1.y << "\t z = " << other1.z << endl;
-	return v1;
-}
+// CMyVector operator+ (const CMyVector & other1, const CMyVector & other2)
+// {
+// 	CMyVector v1;
+// 	v1.x = other1.x + other2.x;
+// 	v1.y = other1.y + other2.y;
+// 	v1.z = other1.z + other2.z;
+// 	cout << "友元1 重载操作符 operator+: x = " << other1.x << "\t y = " << other1.y << "\t z = " << other1.z << endl;
+// 	return v1;
+// }
 
 CMyVector operator+(int n, const CMyVector & other)
 {
@@ -61,7 +62,7 @@ CMyVector operator+(int n, const CMyVector & other)
 	v1.x = n + other.x;
 	v1.y = n + other.y;
 	v1.z = n + other.z;
-	cout << "重载操作符 operator+: x = " << v1.x << "\t y = " << v1.x << "\t z = " << v1.x << endl;
+	cout << "友元2 重载操作符 operator+: x = " << v1.x << "\t y = " << v1.y << "\t z = " << v1.z << endl;
 	return v1;
 }
 

@@ -95,9 +95,10 @@ int main()
 // 	CMyVector c = a + b;  // a + b 中，a作为调用对象， b作为参数。
 // 	/*a = a + 1.1;*/
 
-	CMyVector d = 1.1;
+	CMyVector d;
 	d = 2.0;
 	d = d + 3.0;
+	d = 5.0 + d; //必须 友元 重载 operator+ 操作
 // 	c.display();
 // 	a.display();
 
